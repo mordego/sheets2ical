@@ -3,7 +3,7 @@
 
 # Set Default Variables
     # Config file
-    config_file="config.conf"
+    config_file='config.conf'
     #Calendar name
     calendar_name='Orthopaedic Roster'
     # Timezone configuration
@@ -17,7 +17,7 @@
 
 #check if config file exists
 if [ ! -f "$config_file" ]; then
-    echo "Config file not found. Please create a config.sh file with the required variables."
+    echo "Config file not found. Please create/specify a config file with the required variables. Default is $config_file."
     exit 1
 fi 
 
@@ -38,14 +38,6 @@ fi
 
 # Parse the config file     
 parse_config "$config_file"
-
-#Load variables from config file
-if [ -f "config" ]; then
-    source config.sh
-else
-    echo "Config file not found. Please create a config.sh file with the required variables."
-    exit 1
-fi
 
 # Run checks
     # Check if required commands are available
