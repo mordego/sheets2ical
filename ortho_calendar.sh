@@ -31,8 +31,9 @@ fi
         # Check if the line is not a comment or empty
         if [[ -n "$key" && ! "$key" =~ ^# ]]; then
         # Assign the value to a variable with the key name
-        declare "$key=$value"
-        }
+        eval "$key=$value"
+        
+        fi
     done < "$1"
     }
 
