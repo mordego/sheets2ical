@@ -4,8 +4,11 @@
 # Set Default Variables
     # Config file
     config_file="config.conf"
+    #Calendar name
+    calendar_name='Orthopaedic Roster'
     # Timezone configuration
-    match='BEGIN:VCALENDAR'
+    prepend_calendar_string='BEGIN:VCALENDAR'
+    append_timezone_string='X-WR-TIMEZONE:'
     timezone_file='timezones'
     event_start='DTSTART;VALUE=DATE-TIME:'
     timezone_start='DTSTART;TZID=Australia/Melbourne:'
@@ -83,7 +86,8 @@ printf "Converted to iCal format.\n"
 # Add Timezone Data
 sed -i "s%${event_start}%${timezone_start}%g" ${unique_filename}.ics
 sed -i "s%${event_end}%${timezone_end}%g" ${unique_filename}.ics
-sed -i "/$match/r ${timezone_file}" ${unique_filename}.ics
+sed -i "/$prepend_calendar_string/r ${timezone_file}" ${unique_filename}.ics
+sed -i "/$append_timezone_string/a X-WR-CALNAME\:${calendar_name}" ${unique_filename}.ics
 printf "Timezone data added.\n\n"
 
 # Upload to server via SSH

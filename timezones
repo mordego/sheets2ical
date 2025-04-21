@@ -2,7 +2,6 @@ PRODID:-//Google Inc//Google Calendar 70.9054//EN
 VERSION:2.0
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:Orthopaedic Roster
 X-WR-TIMEZONE:Australia/Melbourne
 BEGIN:VTIMEZONE
 TZID:Australia/Sydney
