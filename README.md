@@ -1,5 +1,5 @@
-# ortho_calendar
-This script downloads a CSV file from Google Sheets, converts it to iCal format, adds timezone data, and uploads it to a server via SSH.
+# sheets2ical
+This script downloads a CSV file from Google Sheets, converts it to iCal format, adds timezone data, and can also upload it to a server via SSH.
 
 ## Installation
 Check and set variables in ortho_calendar_publish.sh  
