@@ -15,7 +15,10 @@ This bash script downloads a CSV file from Google Sheets, converts it to iCal fo
 1. Make a google sheet with event details. Template available at https://docs.google.com/spreadsheets/d/1DBvqr58Xx9Sss5kiTsqD5VDs0aPGBK7mJ2fDbp4Yvlw
     - Publish sheet as CSV so that the script can access it via URL.   
     `(File > Share > Publish to Web)`
-
+1. Clone this repository (or `git pull` if you just want to update from older version)
+    ```
+    git clone https://github.com/mordego/sheets2ical.git
+    ```
 1. Make config file and set variables in `config.conf`, see `config.example.conf` for template.
   
 1. Change/add timezones to `timezones` file as required. Templates can be found here: https://www.tzurl.org  
