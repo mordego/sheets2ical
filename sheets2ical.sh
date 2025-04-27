@@ -4,16 +4,23 @@
 # Set Default Variables
     # Config file
     config_file='config.conf'
-    #Calendar name
-    calendar_name='Calendar Name'
+    # Calendar name
+    calendar_name='Sheets2iCal'
+    # Google Sheets
+    sheets_id='Google_Sheets_ID'
+    csv_url="https://docs.google.com/spreadsheets/d/${sheets_id}/export?format=csv"
     # Timezone configuration
+    timezone_events='Australia/Melbourne'
+    prepend_calendar_string='BEGIN:VCALENDAR'
     prepend_calendar_string='BEGIN:VCALENDAR'
     append_timezone_string='X-WR-TIMEZONE:'
     timezone_file='timezones'
     event_start='DTSTART;VALUE=DATE-TIME:'
-    timezone_start='DTSTART;TZID=Australia/Melbourne:'
+    timezone_start="DTSTART;TZID=${timezone_events}:"
     event_end='DTEND;VALUE=DATE-TIME:'
-    timezone_end='DTEND;TZID=Australia/Melbourne:'
+    timezone_end="DTEND;TZID=${timezone_events}:"
+    # SSH configuration
+    ssh_port='22'
 
 #check if config file exists
 if [ ! -f "$config_file" ]; then
