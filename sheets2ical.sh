@@ -5,7 +5,7 @@
     # Config file
     config_file='config.conf'
     #Calendar name
-    calendar_name='Orthopaedic Roster'
+    calendar_name='Calendar Name'
     # Timezone configuration
     prepend_calendar_string='BEGIN:VCALENDAR'
     append_timezone_string='X-WR-TIMEZONE:'
