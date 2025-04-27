@@ -1,0 +1,3 @@
+[submodule "lib/csv-ical"]
+	path = lib/csv-ical
+	url = https://github.com/albertyw/csv-ical.git
