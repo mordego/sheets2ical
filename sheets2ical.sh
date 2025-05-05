@@ -105,7 +105,10 @@ printf "Uploading to server.\n"
     fi
 scp -P $ssh_port "${unique_filename}.ics" "${ssh_user}@${ssh_host}:${ssh_destination}"
 printf "Upload complete.\n\n"
-printf "https://zapbear.com/wp-content/${unique_filename}.ics\n\n"
+# Set output URL
+output_url="https://zapbear.com/wp-content/${unique_filename}.ics"
+# Print output URL as a clickable link
+printf "\e]8;;${output_url}\e\\${output_url}\e]8;;\e\n\n"
 
 # Cleanup
 rm "${unique_filename}.csv"
